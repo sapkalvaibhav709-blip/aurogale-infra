@@ -1,25 +1,23 @@
-variable "environment" {
-  type = string
+variable "aws_region" {
+  default = "ap-south-1"
 }
 
 variable "vpc_cidr" {
-  type = string
+  default = "10.0.0.0/16"
 }
 
-# Public Subnet Variables
-variable "public_subnet_cidr" {
-  type = string
+variable "public_subnet1" {
+  default = "10.0.1.0/24"
 }
 
-variable "public_availability_zone" {
-  type = string
+variable "public_subnet2" {
+  default = "10.0.2.0/24"
 }
 
-# Private Subnet Variables
-variable "private_subnet_cidr" {
-  type = string
+variable "private_subnet1" {
+  default = "10.0.11.0/24"
 }
 
-variable "private_availability_zone" {
-  type = string
+variable "private_subnet2" {
+  default = "10.0.12.0/24"
 }

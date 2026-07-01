@@ -1,31 +1,28 @@
 variable "aws_region" {
-  type = string
+  default = "ap-south-1"
 }
 
-variable "environment" {
-  type = string
+variable "instance_name" {
+  default = "API Server"
+}
+
+variable "instance_type" {
+  default = "m5a.xlarge"
+}
+
+variable "key_name" {
+  description = "api-server-key"
+  type        = string
 }
 
 variable "vpc_id" {
   type = string
 }
 
-variable "public_subnet_id" {
-  type = string
-}
-
-variable "ami_id" {
-  type = string
-}
-
-variable "instance_type" {
-  type = string
-}
-
-variable "key_name" {
+variable "private_subnet_id" {
   type = string
 }
 
 variable "allowed_ssh_cidr" {
-  type = list(string)
+  default = "0.0.0.0/0"
 }

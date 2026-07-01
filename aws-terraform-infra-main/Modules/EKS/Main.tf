@@ -11,13 +11,13 @@ module "vpc" {
   ]
 
   private_subnets = [
-    "10.0.1.0/24",
-    "10.0.2.0/24"
+    "10.0.20.0/24",
+    "10.0.21.0/24"
   ]
 
   public_subnets = [
-    "10.0.101.0/24",
-    "10.0.102.0/24"
+    "10.0.10.0/24",
+    "10.0.11.0/24"
   ]
 
   enable_nat_gateway = true
@@ -55,7 +55,7 @@ module "eks" {
 
     default = {
 
-      instance_types = ["t3.large"]
+      instance_types = ["c5a.xlarge"]
 
       min_size = 2
 
@@ -67,7 +67,7 @@ module "eks" {
 
       ami_type = "AL2_x86_64_STANDARD"
 
-      disk_size = 30
+      disk_size = 50
     }
   }
 

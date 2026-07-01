@@ -1,15 +1,15 @@
-output "ec2_instance_id" {
-  value = aws_instance.ec2_server.id
+output "application_server_public_ip" {
+  value = aws_instance.app_server.public_ip
 }
 
-output "ec2_public_ip" {
-  value = aws_instance.ec2_server.public_ip
+output "application_server_private_ip" {
+  value = aws_instance.app_server.private_ip
 }
 
-output "ec2_private_ip" {
-  value = aws_instance.ec2_server.private_ip
+output "database_server_public_ip" {
+  value = aws_instance.db_server.public_ip
 }
 
-output "security_group_id" {
-  value = aws_security_group.ec2_sg.id
+output "database_server_private_ip" {
+  value = aws_instance.db_server.private_ip
 }
