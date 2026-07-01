@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "eks-vpc"
+  name = "aurogale-vpc"
 
   cidr = var.vpc_cidr
 

@@ -7,7 +7,7 @@ output "rds_port" {
 }
 
 output "rds_identifier" {
-  value = aws_db_instance.PostgreSQL.identifier
+  value = aws_db_instance.Pos.identifier
 }
 
 output "security_group_id" {
