@@ -1,19 +1,16 @@
-terraform {
-  required_version = ">= 1.5.0"
+provider "aws" {
 
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
+  region = var.aws_region
 
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.6"
+  default_tags {
+
+    tags = {
+
+      Environment = var.environment
+
+      Project = var.project
+
+      ManagedBy = "Terraform"
     }
   }
-}
-
-provider "aws" {
-  region = "ap-south-1"
 }
